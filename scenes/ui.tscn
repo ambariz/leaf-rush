@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cb5g48yxigwhd"]
+
+[ext_resource type="Script" uid="uid://uiil2td1c3oi" path="res://scripts/ui.gd" id="1_nt7q6"]
+
+[sub_resource type="Theme" id="Theme_xlq6p"]
+
+[sub_resource type="Theme" id="Theme_nt7q6"]
+
+[sub_resource type="Theme" id="Theme_x4jx1"]
+
+[node name="ui" type="CanvasLayer" unique_id=1009424713]
+offset = Vector2(20, 20)
+transform = Transform2D(1, 0, 0, 1, 20, 20)
+script = ExtResource("1_nt7q6")
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1710469577]
+anchors_preset = -1
+anchor_left = 0.0017361111
+anchor_top = -0.0046296297
+anchor_right = 0.008680556
+anchor_bottom = 0.0077160494
+offset_left = 17.0
+offset_top = -3.0
+offset_right = 200.0
+offset_bottom = 32.0
+theme = SubResource("Theme_xlq6p")
+theme_type_variation = &"HeaderLarge"
+text = "Coins: 0/16"
+metadata/_edit_use_anchors_ = true
+
+[node name="popup" type="Panel" parent="." unique_id=621458328]
+visible = false
+offset_left = 231.0
+offset_top = 118.0
+offset_right = 913.0
+offset_bottom = 495.0
+
+[node name="PopupText" type="Label" parent="popup" unique_id=520160439]
+layout_mode = 0
+offset_right = 679.0
+offset_bottom = 375.0
+theme = SubResource("Theme_nt7q6")
+theme_type_variation = &"HeaderLarge"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OKButton" type="Button" parent="popup" unique_id=2119375678]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.003
+offset_bottom = -1.1309814
+
+[node name="WinLabel" type="Label" parent="." unique_id=2010604850]
+visible = false
+anchors_preset = -1
+anchor_right = 0.9760001
+anchor_bottom = 0.9480001
+offset_right = -0.35205078
+offset_bottom = -0.30407715
+theme = SubResource("Theme_x4jx1")
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="WinLabel" unique_id=1652533773]
+layout_mode = 0
+offset_left = -54.0
+offset_top = -48.0
+offset_right = 1215.0
+offset_bottom = 661.0
+
+[connection signal="pressed" from="popup/OKButton" to="." method="_on_ok_button_pressed"]

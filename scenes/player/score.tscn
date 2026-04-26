@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://daloc350att5i"]
+
+[ext_resource type="Script" uid="uid://2qt2i80ae0ys" path="res://scripts/score.gd" id="1_hfipn"]
+
+[node name="score" type="Label" unique_id=1000832484]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_hfipn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=836058911]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
